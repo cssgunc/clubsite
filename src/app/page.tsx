@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import { PillLink } from "./components/PillLink";
 import OurTeams from "./components/OurTeams";
+import { TenantItem } from "./components/TenantItem";
 
 const introText =
   " is a student organization dedicated to using our technical skills, time, and resources to make a positive impact on our campus, in our community, and in the world.";
@@ -84,7 +85,13 @@ export default function Home() {
               {introText}
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-2">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="flex flex-col sm:flex-row gap-2"
+          >
             <PillLink
               href="https://forms.gle/rZzLWE1WeLTA26C66"
               label="Join Our Executive Board"
@@ -95,7 +102,7 @@ export default function Home() {
               label="Apply to Join a Team"
               icon={<FontAwesomeIcon icon={faCode} />}
             />
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -108,22 +115,9 @@ export default function Home() {
 
           <div className="space-y-6">
             {tenants.map((tenant, index) => (
-              <motion.div
-                key={index}
-                className="flex items-start gap-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.3,
-                  ease: "easeOut",
-                }}
-              >
-                <span className="text-[#16dbbc] text-4xl font-bold min-w-fit">
-                  {index + 1}
-                </span>
-                <p className="text-base md:text-lg leading-relaxed">{tenant}</p>
-              </motion.div>
+              <TenantItem key={index} index={index}>
+                {tenant}
+              </TenantItem>
             ))}
           </div>
         </div>

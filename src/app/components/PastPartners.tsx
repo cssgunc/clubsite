@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export const PastPartners = () => {
   const partners = [
@@ -52,30 +53,38 @@ export const PastPartners = () => {
         working or have worked with.
       </p>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-items-center">
-        {partners.map((p) => (
-          <Link
+        {partners.map((p, index) => (
+          <motion.div
             key={p.name}
-            href={p.href}
-            target="_blank"
-            aria-label={p.name}
-            className="group block w-full"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5, delay: index * 0.05, ease: "easeOut" }}
+            className="w-full"
           >
-            <div className="relative isolate h-10 md:h-12 flex items-center justify-center">
-              <span
-                aria-hidden
-                className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center"
-              >
-                <span className="block w-20 md:w-24 h-20 md:h-24 rounded-full bg-[#16dbbc]/20 blur-lg opacity-0 scale-90 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 group-hover:bg-[#16dbbc]/30 group-hover:blur-2xl" />
-              </span>
-              <Image
-                src={p.src}
-                alt={p.alt}
-                fill={true}
-                className="relative z-10 max-h-full w-auto object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition duration-300 ease-out"
-                loading="lazy"
-              />
-            </div>
-          </Link>
+            <Link
+              href={p.href}
+              target="_blank"
+              aria-label={p.name}
+              className="group block w-full"
+            >
+              <div className="relative isolate h-10 md:h-12 flex items-center justify-center">
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center"
+                >
+                  <span className="block w-20 md:w-24 h-20 md:h-24 rounded-full bg-[#16dbbc]/20 blur-lg opacity-0 scale-90 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 group-hover:bg-[#16dbbc]/30 group-hover:blur-2xl" />
+                </span>
+                <Image
+                  src={p.src}
+                  alt={p.alt}
+                  fill={true}
+                  className="relative z-10 max-h-full w-auto object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition duration-300 ease-out"
+                  loading="lazy"
+                />
+              </div>
+            </Link>
+          </motion.div>
         ))}
       </div>
     </div>
