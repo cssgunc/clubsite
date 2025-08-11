@@ -47,7 +47,7 @@ export const PillLink = ({
       rel={rel}
     >
       {icon}
-      <span>{label}</span>
+      <span className="w-full flex flex-row justify-center">{label}</span>
     </Link>
   );
 };

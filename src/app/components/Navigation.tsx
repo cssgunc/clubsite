@@ -45,7 +45,7 @@ export const Navigation = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 w-full flex flex-row justify-between pt-4 pb-4 px-4 md:px-10 lg:px-20 items-center z-50 bg-slate-900/50">
+    <div className="fixed top-0 left-0 w-full flex flex-row justify-between pt-4 pb-4 px-4 md:px-10 lg:px-20 items-center z-50 bg-slate-900/50 backdrop-blur-sm">
       <Image
         src="/cssgWhiteLogo.png"
         alt="Logo"

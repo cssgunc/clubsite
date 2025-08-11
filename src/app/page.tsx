@@ -43,7 +43,7 @@ function TypingAnimation() {
   }, []);
 
   return (
-    <div className="text-xl text-sky-300 transition-colors cursor-default bg-sky-300/10 rounded-lg p-2 mt-5">
+    <div className="text-xl text-sky-300 transition-colors cursor-default bg-sky-300/10 rounded-lg p-2 mt-5 text-center">
       <span>{displayedText}</span>
       {showGoat && (
         <motion.span
