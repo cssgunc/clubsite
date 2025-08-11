@@ -25,7 +25,7 @@ export const ProjectTitle = ({
     <Link
       href={href}
       target="_blank"
-      className="group flex flex-row gap-4 items-center hover:scale-[1.01] transition-transform duration-300 hover:translate-x-[4px]"
+      className="group flex flex-row gap-3 md:gap-4 items-center hover:scale-[1.01] transition-transform duration-300 hover:translate-x-[4px]"
       onClick={(e) => e.stopPropagation()}
     >
       <div className="border-2 flex flex-col items-center justify-center border-gray-300 rounded-lg min-h-[52px] min-w-[52px] p-1">
@@ -38,7 +38,7 @@ export const ProjectTitle = ({
           priority={false}
         />
       </div>
-      <span className="flex flex-row w-full justify-between items-center">
+      <span className="flex flex-row w-full justify-between items-center text-sm md:text-base">
         {title}
         <FontAwesomeIcon
           icon={faArrowUpRightFromSquare}

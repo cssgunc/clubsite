@@ -67,24 +67,24 @@ function TypingAnimation() {
 export default function Home() {
   return (
     <div className="flex flex-col w-full items-center">
-      <section className="w-full px-20 flex flex-col items-center min-h-screen justify-center">
+      <section className="w-full px-4 md:px-10 lg:px-20 flex flex-col items-center min-h-screen justify-center">
         <div className="flex flex-col items-center rounded-lg mt-24">
           <Image
             src="/cssglogo.svg"
             alt="Logo"
-            width={600}
-            height={400}
+            width={480}
+            height={320}
             className=""
             priority
           />
           <TypingAnimation />
-          <div className="text-lg py-12 px-40">
-            <p className="text-center text-xl">
+          <div className="text-lg py-8 md:py-12 px-0 md:px-20 lg:px-40">
+            <p className="text-center text-lg md:text-xl">
               <span className="text-[#16dbbc]">CS + Social Good</span>{" "}
               {introText}
             </p>
           </div>
-          <div className="flex flex-row gap-2">
+          <div className="flex flex-col sm:flex-row gap-2">
             <PillLink
               href="https://forms.gle/rZzLWE1WeLTA26C66"
               label="Join Our Executive Board"
@@ -100,8 +100,8 @@ export default function Home() {
       </section>
 
       {/* Rest of the content flows below */}
-      <section className="w-full px-20 flex flex-col items-center space-y-12">
-        <div className="bg-white rounded-lg p-8 text-black">
+      <section className="w-full px-4 md:px-10 lg:px-20 flex flex-col items-center space-y-8 md:space-y-12">
+        <div className="bg-white rounded-lg p-6 md:p-8 text-black w-full">
           <h3 className="text-xl font-semibold mb-6 font-geist-mono">
             {missionTitle}
           </h3>
@@ -122,7 +122,7 @@ export default function Home() {
                 <span className="text-[#16dbbc] text-4xl font-bold min-w-fit">
                   {index + 1}
                 </span>
-                <p className="text-lg leading-relaxed">{tenant}</p>
+                <p className="text-base md:text-lg leading-relaxed">{tenant}</p>
               </motion.div>
             ))}
           </div>

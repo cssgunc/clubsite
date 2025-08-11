@@ -6,6 +6,7 @@ import { BackgroundGradient } from "./components/BackgroundGradient";
 import { Footer } from "./components/Footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { Analytics } from "@vercel/analytics/next";
 config.autoAddCss = false;
 
 const inter = Inter({
@@ -42,6 +43,7 @@ export default function RootLayout({
           </div>
         </div>
       </body>
+      <Analytics />
     </html>
   );
 }

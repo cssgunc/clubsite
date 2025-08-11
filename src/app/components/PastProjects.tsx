@@ -53,14 +53,21 @@ export const PastProjects = () => {
   );
 
   return (
-    <div className="bg-white w-full rounded-lg p-8 text-black flex flex-col">
+    <div className="bg-white w-full rounded-lg p-6 md:p-8 text-black flex flex-col">
       <div className="flex flex-row justify-between items-center">
         <h3 className="text-xl font-semibold mb-2 font-geist-mono">
           Past and Current Projects
         </h3>
         <PillLink
           href="https://forms.gle/6vEGzGwmiBtPPbtr5"
-          label="Apply to Join a Project Team"
+          label={
+            <>
+              <span className="inline md:hidden">Join</span>
+              <span className="hidden md:inline">
+                Apply to Join a Project Team
+              </span>
+            </>
+          }
           icon={<FontAwesomeIcon icon={faCode} />}
         />
       </div>
@@ -80,7 +87,30 @@ export const PastProjects = () => {
           are due. It also allows users to share their results and get
           actionable next-step recommendations based on reported symptoms.
         </p>
-        <div className="flex flex-row gap-4">
+        <div className="sm:hidden flex flex-row gap-4 overflow-x-scroll">
+          <Image
+            src="/bch_screen1.webp"
+            alt="Breast Cancer Hub"
+            width={100}
+            height={200}
+            className="border-2 border-gray-300 rounded-lg"
+          />
+          <Image
+            src="/bch_screen2.webp"
+            alt="Breast Cancer Hub"
+            width={100}
+            height={200}
+            className="border-2 border-gray-300 rounded-lg"
+          />
+          <Image
+            src="/bch_screen3.webp"
+            alt="Breast Cancer Hub"
+            width={100}
+            height={200}
+            className="border-2 border-gray-300 rounded-lg"
+          />
+        </div>
+        <div className="hidden md:flex flex-row gap-4 overflow-x-scroll">
           <Image
             src="/bch_screen1.webp"
             alt="Breast Cancer Hub"

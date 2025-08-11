@@ -42,7 +42,7 @@ export const PastPartners = () => {
   ];
 
   return (
-    <div className="bg-white w-full rounded-lg p-8 text-black flex flex-col">
+    <div className="bg-white w-full rounded-lg p-6 md:p-8 text-black flex flex-col">
       <h3 className="text-xl font-semibold mb-2 font-geist-mono">
         Past Partners
       </h3>
@@ -51,7 +51,7 @@ export const PastPartners = () => {
         events for our members. Here are some of the organizations we&apos;re
         working or have worked with.
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-6 gap-6 items-center justify-items-center">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-items-center">
         {partners.map((p) => (
           <Link
             key={p.name}

@@ -8,14 +8,14 @@ import {
 
 export default function OurTeams() {
   return (
-    <div className="bg-white w-full rounded-lg p-8 text-black flex flex-col">
+    <div className="bg-white w-full rounded-lg p-6 md:p-8 text-black flex flex-col">
       <h3 className="text-xl mb-2 font-geist-mono font-semibold">
         Our Structure
       </h3>
       <p className="text-sm text-gray-500 mb-12">
         CS+SG is comprised of a variety of components, each with a unique focus.
       </p>
-      <div className="grid grid-cols-4 gap-6 items-baseline">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-baseline">
         <div className="flex flex-col items-center">
           <h4 className="text-lg">Projects</h4>
           <span className="text-2xl text-[#16dbbc]">

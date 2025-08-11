@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 
 interface PillLinkProps {
   href: string;
-  label: string;
+  label: ReactNode;
   icon?: ReactNode;
   className?: string;
   newTab?: boolean;
