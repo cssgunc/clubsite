@@ -74,7 +74,7 @@ export default function Home() {
             src="/cssglogo.svg"
             alt="Logo"
             width={480}
-            height={320}
+            height={77}
             className=""
             priority
           />

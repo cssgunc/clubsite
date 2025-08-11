@@ -155,8 +155,8 @@ export const PastProjects = () => {
           <Image
             src="/catch_homepage.png"
             alt="CATCH"
-            width={1000}
-            height={1000}
+            width={700}
+            height={700}
             className="border-2 border-gray-300 rounded-lg"
           />
         </CollapsibleSection>
@@ -194,8 +194,8 @@ export const PastProjects = () => {
           <Image
             src="/lemkin_dashboard.png"
             alt="Lemkin AI"
-            width={1000}
-            height={1000}
+            width={700}
+            height={700}
             className="border-2 border-gray-300 rounded-lg"
           />
         </CollapsibleSection>
@@ -212,8 +212,8 @@ export const PastProjects = () => {
           <Image
             src="/beautiful_together.png"
             alt="Beautiful Together"
-            width={900}
-            height={900}
+            width={700}
+            height={700}
             className="border-2 border-gray-300 rounded-lg"
           />
         </CollapsibleSection>

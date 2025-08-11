@@ -54,7 +54,7 @@ export const Navigation = () => {
         priority
       />
       <div
-        className="relative flex flex-row justify-end items-center gap-2"
+        className="relative flex flex-row justify-end items-center"
         ref={menuRef}
       >
         <button
@@ -111,7 +111,7 @@ export const Navigation = () => {
           </button>
         </div>
 
-        <div className="hidden lg:flex md:flex flex-row space-x-3 sm:space-x-5 lg:space-x-8 items-center">
+        <div className="hidden lg:flex md:flex flex-row space-x-3 items-center">
           {routes.map((link) => (
             <Link
               href={link.href}
