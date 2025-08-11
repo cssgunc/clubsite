@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "./components/Navigation";
+import { BackgroundGradient } from "./components/BackgroundGradient";
+import { Footer } from "./components/Footer";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
-const geistSans = Geist({
+const inter = Inter({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
@@ -26,21 +31,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.className} ${inter.variable} ${geistMono.variable} antialiased`}
       >
         <div className="min-h-screen w-full relative flex flex-col lg:flex-col h-svh">
-          <div
-            className="absolute inset-0 z-[-1]"
-            style={{
-              backgroundImage: `radial-gradient(circle 600px at 50% 50%, rgba(59,130,246,0.3), transparent), linear-gradient(to bottom, transparent, transparent, rgba(56, 189, 248, 0.3))`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-          />
+          <BackgroundGradient />
           <Navigation />
-          <div className="flex shrink h-auto overflow-y-auto flex-col pt-24">
+          <div className="flex shrink h-auto overflow-y-auto flex-col">
             {children}
+            <Footer />
           </div>
         </div>
       </body>
