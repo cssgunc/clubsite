@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 interface ProjectTitleProps {
-  href: string;
+  href?: string;
   logoSrc: string;
   alt: string;
   title: string;
@@ -21,13 +21,8 @@ export const ProjectTitle = ({
   logoWidth = 40,
   logoHeight = 40,
 }: ProjectTitleProps) => {
-  return (
-    <Link
-      href={href}
-      target="_blank"
-      className="group flex flex-row gap-3 md:gap-4 items-center hover:scale-[1.01] transition-transform duration-300 hover:translate-x-[4px]"
-      onClick={(e) => e.stopPropagation()}
-    >
+  const content = (
+    <>
       <div className="border-2 flex flex-col items-center justify-center border-gray-300 rounded-lg min-h-[52px] min-w-[52px] p-1">
         <Image
           src={logoSrc}
@@ -38,13 +33,35 @@ export const ProjectTitle = ({
           priority={false}
         />
       </div>
+    </>
+  );
+
+  if (href) {
+    return (
+      <Link
+        href={href}
+        target="_blank"
+        className="group flex flex-row gap-3 md:gap-4 items-center hover:scale-[1.01] transition-transform duration-300 hover:translate-x-[4px]"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {content}
+        <span className="flex flex-row w-full justify-between items-center text-sm md:text-base">
+          {title}
+          <FontAwesomeIcon
+            icon={faArrowUpRightFromSquare}
+            className="text-[#16dbbc] opacity-100 group-hover:opacity-90 transition-opacity duration-200 text-xs shrink-0"
+          />
+        </span>
+      </Link>
+    );
+  }
+
+  return (
+    <div className="group flex flex-row gap-3 md:gap-4 items-center hover:scale-[1.01] transition-transform duration-300 hover:translate-x-[4px]">
+      {content}
       <span className="flex flex-row w-full justify-between items-center text-sm md:text-base">
         {title}
-        <FontAwesomeIcon
-          icon={faArrowUpRightFromSquare}
-          className="text-[#16dbbc] opacity-100 group-hover:opacity-90 transition-opacity duration-200 text-xs shrink-0"
-        />
       </span>
-    </Link>
+    </div>
   );
 };

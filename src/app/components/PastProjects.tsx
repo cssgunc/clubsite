@@ -28,7 +28,6 @@ export const PastProjects = () => {
 
   const compassTitle = (
     <ProjectTitle
-      href="https://compassctr.org"
       logoSrc="/compass_center_logo.png"
       alt="Compass Center"
       title="Compass Center"
@@ -37,7 +36,6 @@ export const PastProjects = () => {
 
   const lemkinTitle = (
     <ProjectTitle
-      href="https://www.linkedin.com/company/lemkin-ai/"
       logoSrc="/lemkin_logo.png"
       alt="Lemkin AI"
       title="Lemkin AI"
@@ -74,6 +72,8 @@ export const PastProjects = () => {
       </div>
       <p className="text-sm text-gray-500 mb-4">
         A sample of some projects we&apos;ve worked on in recent semesters.
+        Click the caret to expand a project and see more details. Click the
+        project title to see the project in action.
       </p>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -161,6 +161,24 @@ export const PastProjects = () => {
           />
         </CollapsibleSection>
         <CollapsibleSection
+          title={beautifulTogetherTitle}
+          titleClassName="text-[#16dbbc] text-2xl min-w-fit font-geist-mono"
+          defaultExpanded={false}
+        >
+          <p className="text-sm text-gray-500">
+            A website for Beautiful Together, a non-profit organization matching
+            pets with potential adopters in a tinder style, giving animals a
+            shot at finding their forever home.
+          </p>
+          <Image
+            src="/beautiful_together.png"
+            alt="Beautiful Together"
+            width={700}
+            height={700}
+            className="border-2 border-gray-300 rounded-lg"
+          />
+        </CollapsibleSection>
+        <CollapsibleSection
           title={compassTitle}
           titleClassName="text-[#16dbbc] text-2xl min-w-fit font-geist-mono"
           defaultExpanded={false}
@@ -194,24 +212,6 @@ export const PastProjects = () => {
           <Image
             src="/lemkin_dashboard.png"
             alt="Lemkin AI"
-            width={700}
-            height={700}
-            className="border-2 border-gray-300 rounded-lg"
-          />
-        </CollapsibleSection>
-        <CollapsibleSection
-          title={beautifulTogetherTitle}
-          titleClassName="text-[#16dbbc] text-2xl min-w-fit font-geist-mono"
-          defaultExpanded={false}
-        >
-          <p className="text-sm text-gray-500">
-            A website for Beautiful Together, a non-profit organization matching
-            pets with potential adopters in a tinder style, giving animals a
-            shot at finding their forever home.
-          </p>
-          <Image
-            src="/beautiful_together.png"
-            alt="Beautiful Together"
             width={700}
             height={700}
             className="border-2 border-gray-300 rounded-lg"
