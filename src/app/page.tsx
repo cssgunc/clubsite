@@ -13,12 +13,12 @@ import { TenantItem } from "./components/TenantItem";
 const introText =
   " is a student organization dedicated to using our technical skills, time, and resources to make a positive impact on our campus, in our community, and in the world.";
 
-const missionTitle = "Our Work is Threefold...";
+const missionTitle = "Our Goals...";
 
 const tenants = [
   "To complete impactful, technically challenging projects for nonprofit clients, pro bono, to lighten the heavy burden these organizations face.",
   "To provide a space for students to learn about the intersection of computer science and social good, and to connect with other students who are interested in this field.",
-  "To create opportunites for professional development and industry connections for our members, with an emphasis on partners who make a positive impact in the world.",
+  "To create opportunities for professional development and industry connections for our members, with an emphasis on partners who make a positive impact in the world.",
 ];
 
 function TypingAnimation() {
