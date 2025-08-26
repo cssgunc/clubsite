@@ -19,12 +19,6 @@ export const PastPartners = () => {
       alt: "Google logo",
     },
     {
-      name: "a16z",
-      href: "https://a16z.com/",
-      src: "https://upload.wikimedia.org/wikipedia/commons/5/54/Andreessen-horowitz-logo.PNG",
-      alt: "a16z logo",
-    },
-    {
       name: "SAS (North Carolina)",
       href: "https://www.sas.com/en_us/home.html",
       src: "https://upload.wikimedia.org/wikipedia/commons/1/10/SAS_logo_horiz.svg",
