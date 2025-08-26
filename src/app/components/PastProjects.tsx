@@ -3,8 +3,7 @@ import Image from "next/image";
 import { CollapsibleSection } from "./CollapsibleSection";
 import { ProjectTitle } from "./ProjectTitle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faLock } from "@fortawesome/free-solid-svg-icons";
-import { PillLink } from "./PillLink";
+import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
 export const PastProjects = () => {
@@ -57,23 +56,9 @@ export const PastProjects = () => {
         <h3 className="text-xl font-semibold mb-2 font-geist-mono">
           Past and Current Projects
         </h3>
-        <PillLink
-          href="https://forms.gle/6vEGzGwmiBtPPbtr5"
-          label={
-            <>
-              <span className="inline md:hidden">Join</span>
-              <span className="hidden md:inline">
-                Apply to Join a Project Team
-              </span>
-            </>
-          }
-          icon={<FontAwesomeIcon icon={faCode} />}
-        />
       </div>
       <p className="text-sm text-gray-500 mb-4">
         A sample of some projects we&apos;ve worked on in recent semesters.
-        Click the caret to expand a project and see more details. Click the
-        project title to see the project in action.
       </p>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -83,8 +68,9 @@ export const PastProjects = () => {
       >
         <CollapsibleSection
           title={breastCancerHubTitle}
-          titleClassName="text-[#16dbbc] text-2xl min-w-fit font-geist-mono"
+          titleClassName="text-2xl min-w-fit font-geist-mono"
           defaultExpanded={false}
+          href="https://apps.apple.com/ca/app/bch-know-your-breasts/id6745075472?uo=2"
         >
           <p className="text-sm text-gray-500">
             BCH Know Your Breasts is a free mobile app developed by CS+SG in
@@ -144,8 +130,9 @@ export const PastProjects = () => {
         </CollapsibleSection>
         <CollapsibleSection
           title={catchTitle}
-          titleClassName="text-[#16dbbc] text-2xl min-w-fit font-geist-mono"
+          titleClassName="text-2xl min-w-fit font-geist-mono"
           defaultExpanded={false}
+          href="https://www.catch-inc.com/"
         >
           <p className="text-sm text-gray-500">
             A homepage and shop for CATCH (Carolina Adapts Toys for Children), a
@@ -162,8 +149,9 @@ export const PastProjects = () => {
         </CollapsibleSection>
         <CollapsibleSection
           title={beautifulTogetherTitle}
-          titleClassName="text-[#16dbbc] text-2xl min-w-fit font-geist-mono"
+          titleClassName="text-2xl min-w-fit font-geist-mono"
           defaultExpanded={false}
+          href="https://beautiful-together-next.vercel.app/tinder-page"
         >
           <p className="text-sm text-gray-500">
             A website for Beautiful Together, a non-profit organization matching
@@ -180,7 +168,7 @@ export const PastProjects = () => {
         </CollapsibleSection>
         <CollapsibleSection
           title={compassTitle}
-          titleClassName="text-[#16dbbc] text-2xl min-w-fit font-geist-mono"
+          titleClassName="text-2xl min-w-fit font-geist-mono"
           defaultExpanded={false}
         >
           <p className="text-sm text-gray-500">
@@ -201,7 +189,7 @@ export const PastProjects = () => {
         </CollapsibleSection>
         <CollapsibleSection
           title={lemkinTitle}
-          titleClassName="text-[#16dbbc] text-2xl min-w-fit font-geist-mono"
+          titleClassName="text-2xl min-w-fit font-geist-mono"
           defaultExpanded={false}
         >
           <p className="text-sm text-gray-500">

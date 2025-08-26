@@ -52,7 +52,7 @@ export const PastPartners = () => {
         events for our members. Here are some of the organizations we&apos;re
         working or have worked with.
       </p>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-items-center">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-items-center mb-2">
         {partners.map((p, index) => (
           <motion.div
             key={p.name}

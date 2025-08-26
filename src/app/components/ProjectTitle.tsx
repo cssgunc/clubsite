@@ -36,26 +36,6 @@ export const ProjectTitle = ({
     </>
   );
 
-  if (href) {
-    return (
-      <Link
-        href={href}
-        target="_blank"
-        className="group flex flex-row gap-3 md:gap-4 items-center hover:scale-[1.01] transition-transform duration-300 hover:translate-x-[4px]"
-        onClick={(e) => e.stopPropagation()}
-      >
-        {content}
-        <span className="flex flex-row w-full justify-between items-center text-sm md:text-base">
-          {title}
-          <FontAwesomeIcon
-            icon={faArrowUpRightFromSquare}
-            className="text-[#16dbbc] opacity-100 group-hover:opacity-90 transition-opacity duration-200 text-xs shrink-0"
-          />
-        </span>
-      </Link>
-    );
-  }
-
   return (
     <div className="group flex flex-row gap-3 md:gap-4 items-center hover:scale-[1.01] transition-transform duration-300 hover:translate-x-[4px]">
       {content}

@@ -1,7 +1,11 @@
 "use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faLinkedin,
+  faInstagram,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import Image from "next/image";
 import { PillLink } from "./PillLink";
@@ -10,6 +14,12 @@ import { Modal } from "./modals/Modal";
 import ContactCore from "./modals/Contact";
 
 const routes = [
+  {
+    name: "GitHub",
+    href: "https://github.com/unc-cssg",
+    isReferrer: true,
+    fa: faGithub,
+  },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/company/unc-cs-social-good/",
@@ -21,12 +31,6 @@ const routes = [
     href: "https://www.instagram.com/unc_cssg/",
     isReferrer: true,
     fa: faInstagram,
-  },
-  {
-    name: "Email",
-    href: "mailto:cssgunc@gmail.com",
-    isReferrer: true,
-    fa: faEnvelope,
   },
 ];
 

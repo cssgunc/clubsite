@@ -1,10 +1,14 @@
 "use client";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 import { useState, ReactNode } from "react";
 
 interface CollapsibleSectionProps {
   title: ReactNode;
   children: ReactNode;
   defaultExpanded?: boolean;
+  href?: string;
   titleClassName?: string;
   contentClassName?: string;
   caretClassName?: string;
@@ -14,6 +18,7 @@ export const CollapsibleSection = ({
   title,
   children,
   defaultExpanded = true,
+  href = "",
   titleClassName = "",
   contentClassName = "",
   caretClassName = "",
@@ -46,6 +51,18 @@ export const CollapsibleSection = ({
           />
         </svg>
         <div className="flex-1">{title}</div>
+        {href && (
+          <Link
+            href={href}
+            target="_blank"
+            className={`font-geist-sans text-sm border-2 rounded-full bg-[#16dbbc]/10 border-[#16dbbc]/40 text-[#16dbbc] px-2 py-1 max-w-fit hover:bg-[#16dbbc]/20 duration-200 flex items-center gap-1 transition-all duration-300 ${
+              isExpanded ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            See this project in action...{" "}
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          </Link>
+        )}
       </div>
       <div
         className={`overflow-hidden transition-all duration-300 ${

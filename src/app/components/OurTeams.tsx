@@ -20,7 +20,7 @@ export default function OurTeams() {
         <TeamCard
           title="Projects"
           icon={<FontAwesomeIcon icon={faCode} />}
-          description="The projects team is responsible for building projects benefitting nonprofits in the Chapel Hill area and beyond."
+          description="The projects team is responsible for building projects benefiting nonprofits in the Chapel Hill area and beyond."
           delay={0 * 0.05}
         />
         <TeamCard
