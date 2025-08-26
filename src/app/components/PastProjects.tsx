@@ -4,9 +4,10 @@ import { CollapsibleSection } from "./CollapsibleSection";
 import { ProjectTitle } from "./ProjectTitle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 export const PastProjects = () => {
+  const prefersReducedMotion = useReducedMotion();
   const breastCancerHubTitle = (
     <ProjectTitle
       href="https://apps.apple.com/ca/app/bch-know-your-breasts/id6745075472?uo=2"
@@ -61,10 +62,14 @@ export const PastProjects = () => {
         A sample of some projects we&apos;ve worked on in recent semesters.
       </p>
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+        whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
+        viewport={
+          prefersReducedMotion ? undefined : { once: true, amount: 0.5 }
+        }
+        transition={
+          prefersReducedMotion ? undefined : { duration: 0.5, ease: "easeOut" }
+        }
       >
         <CollapsibleSection
           title={breastCancerHubTitle}

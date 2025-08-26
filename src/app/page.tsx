@@ -75,6 +75,7 @@ function TypingAnimation() {
 }
 
 export default function Home() {
+  const prefersReducedMotion = useReducedMotion();
   return (
     <div className="flex flex-col w-full items-center">
       <section className="w-full px-4 md:px-10 lg:px-20 flex flex-col items-center min-h-screen justify-center">
@@ -95,10 +96,18 @@ export default function Home() {
             </p>
           </div>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+            whileInView={
+              prefersReducedMotion ? undefined : { opacity: 1, y: 0 }
+            }
+            viewport={
+              prefersReducedMotion ? undefined : { once: true, amount: 0.5 }
+            }
+            transition={
+              prefersReducedMotion
+                ? undefined
+                : { duration: 0.5, ease: "easeOut" }
+            }
             className="flex flex-col sm:flex-row gap-2"
           >
             <PillLink

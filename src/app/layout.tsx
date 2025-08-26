@@ -7,7 +7,6 @@ import { Footer } from "./components/Footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { Analytics } from "@vercel/analytics/next";
-import { MotionConfig } from "framer-motion";
 config.autoAddCss = false;
 
 const inter = Inter({
@@ -35,16 +34,14 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${inter.variable} ${geistMono.variable} antialiased`}
       >
-        <MotionConfig reducedMotion="user">
-          <div className="min-h-screen w-full relative flex flex-col lg:flex-col h-svh">
-            <BackgroundGradient />
-            <Navigation />
-            <div className="flex shrink h-auto overflow-y-auto flex-col">
-              {children}
-              <Footer />
-            </div>
+        <div className="min-h-screen w-full relative flex flex-col lg:flex-col h-svh">
+          <BackgroundGradient />
+          <Navigation />
+          <div className="flex shrink h-auto overflow-y-auto flex-col">
+            {children}
+            <Footer />
           </div>
-        </MotionConfig>
+        </div>
       </body>
       <Analytics />
     </html>

@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 export type TeamCardProps = {
   title: string;
@@ -18,13 +18,18 @@ export function TeamCard({
   className,
   delay = 0,
 }: TeamCardProps) {
+  const prefersReducedMotion = useReducedMotion();
   return (
     <motion.div
       className={`flex flex-col items-center ${className ?? ""}`}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ duration: 0.5, delay, ease: "easeOut" }}
+      initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+      whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
+      viewport={prefersReducedMotion ? undefined : { once: true, amount: 0.5 }}
+      transition={
+        prefersReducedMotion
+          ? undefined
+          : { duration: 0.5, delay, ease: "easeOut" }
+      }
     >
       <h4 className="text-lg">{title}</h4>
       <span className="text-2xl text-[#16dbbc]">{icon}</span>

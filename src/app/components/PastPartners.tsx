@@ -1,8 +1,10 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 export const PastPartners = () => {
+  const prefersReducedMotion = useReducedMotion();
   const partners = [
     {
       name: "Amazon Web Services",
@@ -56,10 +58,18 @@ export const PastPartners = () => {
         {partners.map((p, index) => (
           <motion.div
             key={p.name}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5, delay: index * 0.05, ease: "easeOut" }}
+            initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+            whileInView={
+              prefersReducedMotion ? undefined : { opacity: 1, y: 0 }
+            }
+            viewport={
+              prefersReducedMotion ? undefined : { once: true, amount: 0.5 }
+            }
+            transition={
+              prefersReducedMotion
+                ? undefined
+                : { duration: 0.5, delay: index * 0.05, ease: "easeOut" }
+            }
             className="w-full"
           >
             <Link
