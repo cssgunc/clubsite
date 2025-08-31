@@ -16,7 +16,7 @@ import ContactCore from "./modals/Contact";
 const routes = [
   {
     name: "GitHub",
-    href: "https://github.com/unc-cssg",
+    href: "https://github.com/cssgunc",
     isReferrer: true,
     fa: faGithub,
   },
