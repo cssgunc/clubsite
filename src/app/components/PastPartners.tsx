@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 
@@ -48,47 +47,31 @@ export const PastPartners = () => {
         events for our members. Here are some of the organizations we&apos;re
         working or have worked with.
       </p>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-items-center mb-2">
+      <div className="flex flex-wrap gap-8 justify-center mb-2">
         {partners.map((p, index) => (
-          <motion.div
+          <motion.a
             key={p.name}
-            initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
-            whileInView={
-              prefersReducedMotion ? undefined : { opacity: 1, y: 0 }
+            href={p.href}
+            target="_blank"
+
+          	initial={prefersReducedMotion ? {opacity: 0}: { opacity: 0, y: 20 }}
+          	whileInView={prefersReducedMotion ? {opacity: 1} : { opacity: 1, y: 0 }}
+          	viewport={{ once: true, amount: 0.5 }}
+          	transition={{ duration: 0.5, delay: index * 0.05, ease: "easeOut" }}
+
+            className={
+              "relative flex flex-1/4 xl:flex-1/6 grow h-12"
+              + " hover:before:bg-[#16dbbc] before:rounded-full before:m-auto before:scale-150 before:w-16 before:h-8 before:blur-2xl before:opacity-50 before:transition-all before:duration-300"
             }
-            viewport={
-              prefersReducedMotion ? undefined : { once: true, amount: 0.5 }
-            }
-            transition={
-              prefersReducedMotion
-                ? undefined
-                : { duration: 0.5, delay: index * 0.05, ease: "easeOut" }
-            }
-            className="w-full"
           >
-            <Link
-              href={p.href}
-              target="_blank"
-              aria-label={p.name}
-              className="group block w-full"
-            >
-              <div className="relative isolate h-10 md:h-12 flex items-center justify-center">
-                <span
-                  aria-hidden
-                  className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center"
-                >
-                  <span className="block w-20 md:w-24 h-20 md:h-24 rounded-full bg-[#16dbbc]/20 blur-lg opacity-0 scale-90 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 group-hover:bg-[#16dbbc]/30 group-hover:blur-2xl" />
-                </span>
-                <Image
-                  src={p.src}
-                  alt={p.alt}
-                  fill={true}
-                  className="relative z-10 max-h-full w-auto object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition duration-300 ease-out"
-                  loading="lazy"
-                />
-              </div>
-            </Link>
-          </motion.div>
+            <Image
+              src={p.src}
+              alt={p.alt}
+              fill={true}
+              className="z-10 object-contain transition opacity-70 grayscale hover:opacity-100 hover:grayscale-0"
+              loading="lazy"
+            />
+          </motion.a>
         ))}
       </div>
     </div>
