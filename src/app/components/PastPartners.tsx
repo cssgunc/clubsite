@@ -26,13 +26,13 @@ export const PastPartners = () => {
     {
       name: "Innovate Carolina",
       href: "https://innovate.unc.edu/",
-      src: "/innovate_carolina.png",
+      src: "/innovate_carolina_h.svg",
       alt: "Innovate Carolina logo",
     },
     {
       name: "Perplexity",
       href: "https://www.perplexity.ai/",
-      src: "https://www.perplexity.ai/favicon.svg",
+      src: "/perplexity_logo.svg",
       alt: "Perplexity logo",
     },
   ];
