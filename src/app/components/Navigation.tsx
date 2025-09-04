@@ -115,7 +115,7 @@ export const Navigation = () => {
           </button>
         </div>
 
-        <div className="hidden lg:flex md:flex flex-row space-x-3 items-center">
+        <div className="hidden lg:flex md:flex flex-row space-x-4 items-center">
           {routes.map((link) => (
             <Link
               href={link.href}
@@ -135,8 +135,10 @@ export const Navigation = () => {
                   />
                 )}
                 <span className="relative z-10">{link.name}</span>
-                <span className="hidden lg:inline-block absolute left-full ml-1 top-1/2 -translate-y-1/2 origin-left opacity-0 -z-10 scale-50 -translate-x-2 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:scale-100 group-hover:translate-x-0">
-                  -&gt;
+                <span className="hidden lg:inline-block absolute left-full ml-1 top-1/2 -translate-y-1/2 origin-left opacity-0 -z-10 scale-25 -translate-x-2 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:scale-75 group-hover:translate-x-0 text-xl font-bold">
+                  {/* &rarr; */}
+                  {/* &#10140; */}
+                  &#10132;
                 </span>
               </h2>
             </Link>
@@ -144,6 +146,7 @@ export const Navigation = () => {
           <PillLink
             href="#contact"
             label="Contact Us"
+            className="ml-4"
             icon={<FontAwesomeIcon icon={faEnvelope} fixedWidth />}
             onClick={() => setIsContactOpen(true)}
           />
