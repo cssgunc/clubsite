@@ -13,12 +13,12 @@ import { TenantItem } from "./components/TenantItem";
 const introText =
   " is a student organization dedicated to using our technical skills, time, and resources to make a positive impact on our campus, in our community, and in the world.";
 
-const missionTitle = "Our Goals...";
+const missionTitle = "Our Goals";
 
 const tenants = [
-  "To complete impactful, technically challenging projects for nonprofit clients, pro bono, to lighten the heavy burden these organizations face.",
-  "To provide a space for students to learn about the intersection of computer science and social good, and to connect with other students who are interested in this field.",
-  "To create opportunities for professional development and industry connections for our members, with an emphasis on partners who make a positive impact in the world.",
+  "Complete impactful, technically challenging projects for nonprofit clients, pro bono, to lighten the heavy burden these organizations face.",
+  "Provide a space for students to learn about the intersection of computer science and social good, and to connect with other students who are interested in this field.",
+  "Create opportunities for professional development and industry connections for our members, with an emphasis on partners who make a positive impact.",
 ];
 
 function TypingAnimation() {
@@ -91,8 +91,7 @@ export default function Home() {
           <TypingAnimation />
           <div className="text-lg pt-8 pb-8 md:pb-12 px-0 md:px-20 lg:px-40">
             <p className="text-center text-lg md:text-xl">
-              <span className="text-[#16dbbc]">CS + Social Good</span>{" "}
-              {introText}
+              <h1 className="text-[#16dbbc]">CS + Social Good</h1> {introText}
             </p>
           </div>
           <motion.div
@@ -111,7 +110,7 @@ export default function Home() {
             className="flex flex-col sm:flex-row gap-2"
           >
             <PillLink
-              href="https://forms.gle/6vEGzGwmiBtPPbtr5"
+              href="https://docs.google.com/forms/d/16vf9dLz_vYo-lusXhB43Ewu_iNVxe7lSScrV4PxhN7Q/edit"
               label="Apply to Join a Team"
               icon={<FontAwesomeIcon icon={faCode} />}
             />
@@ -119,7 +118,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full px-4 md:px-10 lg:px-20 flex flex-col items-center space-y-8 md:space-y-12">
+      <section className="w-full px-4 md:px-10 lg:px-20 flex flex-col items-center space-y-8 md:space-y-12 ">
         <div className="bg-white rounded-lg p-6 md:p-8 text-black w-full">
           <h3 className="text-xl font-semibold mb-6 font-geist-mono">
             {missionTitle}

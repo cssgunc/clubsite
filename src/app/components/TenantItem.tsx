@@ -12,7 +12,7 @@ export function TenantItem({ index, children }: TenantItemProps) {
   const prefersReducedMotion = useReducedMotion();
   return (
     <motion.div
-      className="flex items-start gap-4"
+      className="flex items-center gap-4"
       initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
       whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={prefersReducedMotion ? undefined : { once: true, amount: 0.5 }}
