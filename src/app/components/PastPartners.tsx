@@ -32,7 +32,7 @@ export const PastPartners = () => {
     {
       name: "Perplexity",
       href: "https://www.perplexity.ai/",
-      src: "https://www.perplexity.ai/favicon.svg",
+      src: "https://upload.wikimedia.org/wikipedia/commons/1/1d/Perplexity_AI_logo.svg",
       alt: "Perplexity logo",
     },
   ];
@@ -53,15 +53,17 @@ export const PastPartners = () => {
             key={p.name}
             href={p.href}
             target="_blank"
-
-          	initial={prefersReducedMotion ? {opacity: 0}: { opacity: 0, y: 20 }}
-          	whileInView={prefersReducedMotion ? {opacity: 1} : { opacity: 1, y: 0 }}
-          	viewport={{ once: true, amount: 0.5 }}
-          	transition={{ duration: 0.5, delay: index * 0.05, ease: "easeOut" }}
-
+            initial={
+              prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: 20 }
+            }
+            whileInView={
+              prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }
+            }
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5, delay: index * 0.05, ease: "easeOut" }}
             className={
-              "relative flex flex-1/4 sm:flex-auto h-10"
-              + " hover:before:bg-[#16dbbc] before:rounded-full before:m-auto before:scale-150 before:w-16 before:h-8 before:blur-2xl before:opacity-50 before:transition-all before:duration-300"
+              "relative flex flex-1/4 sm:flex-auto h-10" +
+              " hover:before:bg-[#16dbbc] before:rounded-full before:m-auto before:scale-150 before:w-16 before:h-8 before:blur-2xl before:opacity-50 before:transition-all before:duration-300"
             }
           >
             <Image

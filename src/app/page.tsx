@@ -25,7 +25,7 @@ function TypingAnimation() {
   const text = "at the University of North Carolina at Chapel Hill ";
   const prefersReducedMotion = useReducedMotion();
   const [displayedText, setDisplayedText] = useState(
-    prefersReducedMotion ? text : ""
+    prefersReducedMotion ? text : "",
   );
   const [showGoat, setShowGoat] = useState(prefersReducedMotion);
 
@@ -90,9 +90,9 @@ export default function Home() {
           />
           <TypingAnimation />
           <div className="text-lg pt-8 pb-8 md:pb-12 px-0 md:px-20 lg:px-40">
-            <p className="text-center text-lg md:text-xl">
+            <div className="text-center text-lg md:text-xl">
               <h1 className="text-[#16dbbc]">CS + Social Good</h1> {introText}
-            </p>
+            </div>
           </div>
           <motion.div
             initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
