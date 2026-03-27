@@ -17,37 +17,11 @@ export const PastProjects = () => {
     />
   );
 
-  const catchTitle = (
-    <ProjectTitle
-      href="https://www.catch-inc.com/"
-      logoSrc="/catch_logo.png"
-      alt="CATCH"
-      title="CATCH"
-    />
-  );
-
-  const compassTitle = (
-    <ProjectTitle
-      logoSrc="/compass_center_logo.png"
-      alt="Compass Center"
-      title="Compass Center"
-    />
-  );
-
   const lemkinTitle = (
     <ProjectTitle
       logoSrc="/lemkin_logo.png"
       alt="Lemkin AI"
       title="Lemkin AI"
-    />
-  );
-
-  const beautifulTogetherTitle = (
-    <ProjectTitle
-      href="https://beautiful-together-next.vercel.app/tinder-page"
-      logoSrc="/beautiful_together_logo.png"
-      alt="Beautiful Together"
-      title="Beautiful Together"
     />
   );
 
@@ -65,6 +39,13 @@ export const PastProjects = () => {
       logoSrc="/parr_center_logo_2.jpg"
       alt="Parr Center"
       title="Parr Center Ethics Bowl Academy"
+    />
+  );
+  const ocslTitle = (
+    <ProjectTitle
+      logoSrc="/ocsl2.png"
+      alt="Party Registration"
+      title="Party Registration"
     />
   );
 
@@ -152,81 +133,50 @@ export const PastProjects = () => {
           </div>
         </CollapsibleSection>
         <CollapsibleSection
-          title={catchTitle}
+          title={ocslTitle}
           titleClassName="text-2xl min-w-fit font-geist-mono"
           defaultExpanded={false}
-          href="https://www.catch-inc.com/"
+          href=""
         >
           <p className="text-sm text-gray-500">
-            A homepage and shop for CATCH (Carolina Adapts Toys for Children), a
-            non-profit organization that provides adaptive toys to children with
-            special needs.
+            In partnership with Off-Campus Student Life and 
+            Chapel Hill PD, Party Smart lets students register 
+            and keep track of their house parties in exchange 
+            for a citation-free experience. If a noise complaint 
+            is called in, Chapel Hill PD are able to use their 
+            dashboard to find the registered party and track 
+            incidents via an interactive map. 
+
           </p>
-          <Image
-            src="/catch_homepage.png"
-            alt="CATCH"
-            width={700}
-            height={700}
-            className="border-2 border-gray-300 rounded-lg"
-          />
+            <Image
+              src="/party_smart_policeview.png"
+              alt="Party Smart Police View"
+              width={700}
+              height={700}
+              className="border-2 border-gray-300 rounded-lg"
+            />
         </CollapsibleSection>
         <CollapsibleSection
-          title={beautifulTogetherTitle}
+          title={parrCenterTitle}
           titleClassName="text-2xl min-w-fit font-geist-mono"
           defaultExpanded={false}
-          href="https://beautiful-together-next.vercel.app/tinder-page"
+          href="https://ethicsbowlacademy.org/homepage"
         >
           <p className="text-sm text-gray-500">
-            A website for Beautiful Together, a non-profit organization matching
-            pets with potential adopters in a tinder style, giving animals a
-            shot at finding their forever home.
+            An Ethics Bowl Academy website for the Parr Center for Ethics,
+            allowing them to help students build critical thinking and 
+            ethical reasoning skills through interactive modules. Module features 
+            include video lessons, knowledge quizzes, digital flashcards, 
+            reflective writing prompts, drag-and-drop sorting questions, and public polls. 
+
           </p>
-          <Image
-            src="/beautiful_together.png"
-            alt="Beautiful Together"
-            width={700}
-            height={700}
-            className="border-2 border-gray-300 rounded-lg"
-          />
-        </CollapsibleSection>
-        <CollapsibleSection
-          title={compassTitle}
-          titleClassName="text-2xl min-w-fit font-geist-mono"
-          defaultExpanded={false}
-        >
-          <p className="text-sm text-gray-500">
-            An internal tool allowing the Compass Center of Chapel Hill to
-            organize and track volunteers, resources, training materials, and
-            services.
-          </p>
-          <div className="self-center text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#16dbbc]/40 bg-[#16dbbc]/10 px-4 text-sm text-[#16dbbc] py-2">
-              <FontAwesomeIcon icon={faLock} />
-              <span>Internal only</span>
-            </div>
-            <p className="mt-2 text-xs text-gray-500">
-              Due to privacy constraints, access is restricted to Compass Center
-              staff.
-            </p>
-          </div>
-        </CollapsibleSection>
-        <CollapsibleSection
-          title={lemkinTitle}
-          titleClassName="text-2xl min-w-fit font-geist-mono"
-          defaultExpanded={false}
-        >
-          <p className="text-sm text-gray-500">
-            Designed and prototyped a web app for Lemkin AI, a platform allowing
-            human rights organizations to analyze evidence, identify patterns,
-            and make informed decisions in building cases across borders.
-          </p>
-          <Image
-            src="/lemkin_dashboard.png"
-            alt="Lemkin AI"
-            width={700}
-            height={700}
-            className="border-2 border-gray-300 rounded-lg"
-          />
+            <Image
+              src="/parrcenter_homepage.png"
+              alt="Parr Center Ethics Bowl Academy"
+              width={700}
+              height={700}
+              className="border-2 border-gray-300 rounded-lg"
+            />
         </CollapsibleSection>
         <CollapsibleSection
           title={cccTitle}
@@ -252,28 +202,23 @@ export const PastProjects = () => {
               className="border-2 border-gray-300 rounded-lg"
             />
         </CollapsibleSection>
-
         <CollapsibleSection
-          title={parrCenterTitle}
+          title={lemkinTitle}
           titleClassName="text-2xl min-w-fit font-geist-mono"
           defaultExpanded={false}
-          href="https://ethicsbowlacademy.org/homepage"
         >
           <p className="text-sm text-gray-500">
-            An Ethics Bowl Academy website for the Parr Center for Ethics,
-            allowing them to help students build critical thinking and 
-            ethical reasoning skills through interactive modules. Module features 
-            include video lessons, knowledge quizzes, digital flashcards, 
-            reflective writing prompts, drag-and-drop sorting questions, and public polls. 
-
+            Designed and prototyped a web app for Lemkin AI, a platform allowing
+            human rights organizations to analyze evidence, identify patterns,
+            and make informed decisions in building cases across borders.
           </p>
-            <Image
-              src="/parrcenter_homepage.png"
-              alt="Parr Center Ethics Bowl Academy"
-              width={700}
-              height={700}
-              className="border-2 border-gray-300 rounded-lg"
-            />
+          <Image
+            src="/lemkin_dashboard.png"
+            alt="Lemkin AI"
+            width={700}
+            height={700}
+            className="border-2 border-gray-300 rounded-lg"
+          />
         </CollapsibleSection>
       </motion.div>
 

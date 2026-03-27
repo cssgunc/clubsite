@@ -110,8 +110,8 @@ export default function Home() {
             className="flex flex-col sm:flex-row gap-2"
           >
             <PillLink
-              href="https://docs.google.com/forms/d/16vf9dLz_vYo-lusXhB43Ewu_iNVxe7lSScrV4PxhN7Q/edit"
-              label="Apply to Join a Team"
+              href=""
+              label="Applications Coming Soon!"
               icon={<FontAwesomeIcon icon={faCode} />}
             />
           </motion.div>
