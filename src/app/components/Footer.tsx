@@ -16,7 +16,7 @@ export const Footer = () => {
           <span role="img" aria-label="love">
             ❤️
           </span>
-          <span>by CS+SG, 2025</span>
+          <span>by CS+SG, 2026</span>
         </div>
         <div className="opacity-80">CS + Social Good at UNC Chapel Hill</div>
         <span className="flex flex-row gap-2 items-center">
