@@ -110,8 +110,8 @@ export default function Home() {
             className="flex flex-col sm:flex-row gap-2"
           >
             <PillLink
-              href="https://linktr.ee/unc_cssg"
-              label="Applications are currently up!"
+              href=""
+              label="Applications Coming Soon!"
               icon={<FontAwesomeIcon icon={faCode} />}
             />
           </motion.div>
